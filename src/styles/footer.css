@@ -1,8 +1,8 @@
 footer{
 	border-radius: 2.5rem;
-	box-shadow: 5px 5px 3px #0e0411, -5px -5px 3px #380e45;
-	background: #23092B;
-	color: #edf5e1;
+	box-shadow: 5px 5px 3px #060C17, -5px -5px 3px #1A2D52;
+	background: #0F1B33;
+	color: #F0F4FF;
 	font-family: "Montserrat Alternates", monospace;
 	height: auto;
 	min-height: 210px;
@@ -42,21 +42,21 @@ footer h1{
 .social-icon{
 	height: 50px;
 	width: 50px;
-	background-color: #4b00b2;
+	background-color: #B22234;
 	border-radius: 1rem;
 	align-items: center;
 	padding: 2.5px;
 	margin: .8rem;
-	box-shadow:  1px 1px 0.5px #1e0047,
-             	-1px -1px 0.5px #7800ff;
+	box-shadow:  1px 1px 0.5px #060C17,
+             	-1px -1px 0.5px #B22234;
 }
 .social-icon:hover{
-	background-color: #26005b;
-	box-shadow: inset -1px -1px 0.5px #3d0092,
-             	inset 1px 1px 0.5px #0f0024;
+	background-color: #8B0000;
+	box-shadow: inset -1px -1px 0.5px #B22234,
+             	inset 1px 1px 0.5px #060C17;
 }
 span.gradient-text{
-    background: linear-gradient(2deg,#f6f6f6, #00ffcc);
+    background: linear-gradient(2deg,#F0F4FF, #B22234);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

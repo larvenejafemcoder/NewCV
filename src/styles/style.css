@@ -312,24 +312,50 @@ template {
     text-align: center;
   }
   .sidenav a {
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
   }
   .sidenav .nav-wrapper {
-    padding-top: 40px;
-    padding-left: 40px;
+    padding-top: 30px;
+    padding-left: 30px;
   }
   .decoration-wrapper .eye {
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
   }
   .decoration-wrapper img {
-    width: 16rem;
-    height: 16rem;
-    padding: 40px;
+    width: 14rem;
+    height: 14rem;
+    padding: 30px;
+  }
+  .logo {
+    height: 140px;
+    width: 140px;
+  }
+  #trap1 {
+    top: 80px;
+    left: 30px;
+  }
+  #trap2 {
+    top: 30px;
+    left: 34px;
+  }
+  #trap3 {
+    top: 34px;
+    left: 60px;
+  }
+  .trap {
+    width: 70px;
+    border-bottom-width: 18px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .start .herotxt .slide h1 {
+    font-size: clamp(2rem, 7vw, 3.5rem);
+  }
+  .start .herotxt h2 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+  }
   .wrapper {
     grid-template-columns: 1fr;
     padding: 0 1rem;
@@ -344,8 +370,8 @@ template {
     display: none;
   }
   .outer-heropic-container {
-    width: min(30rem, 80vw);
-    height: min(30rem, 80vw);
+    width: min(26rem, 75vw);
+    height: min(26rem, 75vw);
   }
   .skill-bars {
     padding: 20px;
@@ -358,50 +384,138 @@ template {
   }
   footer {
     width: 95%;
+    padding: 5px 15px;
+  }
+  .title h2 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
   }
 }
 
 @media screen and (max-width: 576px) {
+  .start {
+    height: auto;
+    min-height: 90vh;
+    padding: 80px 0 40px;
+  }
   .start .herotxt .slide h1 {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
     white-space: normal;
     border-right: none;
     animation: none;
+  }
+  .start .herotxt h2 {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+  .start .main-container {
+    gap: 1rem;
+    padding: 0 1rem;
   }
   .container {
     width: 95vw;
   }
   .clock {
-    padding: 40px 15px;
+    padding: 30px 15px;
   }
   .title h2 {
-    margin: 20px auto;
+    margin: 15px auto;
+    font-size: clamp(1.5rem, 7vw, 2rem);
   }
   .outer-heropic-container {
-    width: min(22rem, 90vw);
-    height: min(22rem, 90vw);
+    width: min(18rem, 85vw);
+    height: min(18rem, 85vw);
   }
   .box .front-face {
-    padding: 30px 40px;
+    padding: 25px 30px;
+    height: 180px;
   }
   .box .front-face .icon i {
-    font-size: 45px;
+    font-size: 38px;
+  }
+  .box .front-face span,
+  .box .back-face span {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+  .box .back-face {
+    width: 85%;
+    padding: 25px;
+    height: 180px;
   }
   .social-icon {
-    height: 40px;
-    width: 40px;
+    height: 36px;
+    width: 36px;
+    margin: 0.5rem;
   }
   .social-icon img {
-    height: 30px;
-    width: 30px;
+    height: 26px;
+    width: 26px;
+  }
+  footer {
+    padding: 5px 10px;
   }
   footer h1 {
-    font-size: 18px;
-    margin: 0.67em 10px;
+    font-size: 16px;
+    margin: 0.5em 10px;
   }
   footer p {
-    font-size: 14px;
+    font-size: 13px;
     margin-left: 10px;
+  }
+  .logo {
+    height: 100px;
+    width: 100px;
+  }
+  #trap1 {
+    top: 60px;
+    left: 22px;
+  }
+  #trap2 {
+    top: 22px;
+    left: 25px;
+  }
+  #trap3 {
+    top: 26px;
+    left: 45px;
+  }
+  .trap {
+    width: 50px;
+    border-bottom-width: 14px;
+  }
+  .skill-bars .bar .info span {
+    font-size: clamp(12px, 3vw, 14px);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .start .herotxt .slide h1 {
+    font-size: clamp(1.3rem, 7vw, 1.6rem);
+  }
+  .start .herotxt h2 {
+    font-size: clamp(0.85rem, 4vw, 1rem);
+  }
+  .box .front-face {
+    padding: 20px;
+  }
+  .box .front-face .icon i {
+    font-size: 32px;
+  }
+  .box .front-face span,
+  .box .back-face span {
+    font-size: 0.85rem;
+  }
+  .title h2 {
+    font-size: clamp(1.2rem, 6vw, 1.5rem);
+  }
+  .outer-heropic-container {
+    width: min(15rem, 90vw);
+    height: min(15rem, 90vw);
+  }
+  .social-icon {
+    height: 32px;
+    width: 32px;
+  }
+  .social-icon img {
+    height: 22px;
+    width: 22px;
   }
 }
 .start {
@@ -411,7 +525,7 @@ template {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #f6f6f6;
+  color: #F0F4FF;
 }
 .start .main-container {
   display: flex;
@@ -431,7 +545,7 @@ template {
 .start .herotxt .slide h1 {
   text-align: left;
   font-weight: bolder;
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2.2rem, 6vw, 5.5rem);
   font-family: "Major Mono Display", monospace;
   overflow: hidden;
   border-right: 0.15em solid transparent;
@@ -441,7 +555,7 @@ template {
   animation: typing 3s;
 }
 .start .herotxt h1.gradient-text {
-  background: linear-gradient(2deg, #00ff93, #c850c0);
+  background: linear-gradient(2deg, #B22234, #3C3B6E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -461,13 +575,13 @@ template {
 }
 .start .herotxt h2 {
   font-weight: 800;
-  font-size: clamp(1.8rem, 4vw, 3.6rem);
+  font-size: clamp(1.5rem, 4vw, 3.2rem);
   font-family: "Montserrat Alternates", monospace;
   text-align: center;
 }
 .start .herotxt h2 span::after {
   content: "";
-  background: linear-gradient(-45deg, #c850c0, #4b00b2);
+  background: linear-gradient(-45deg, #3C3B6E, #1E3A6E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: change-text 9s ease-in-out 0s infinite;
@@ -509,20 +623,20 @@ template {
   overflow: hidden;
 }
 .start .scroll button i {
-  color: #c850c0;
+  color: #B22234;
 }
 
 .title h2 {
   font-family: "Montserrat Alternates", sans-serif;
-  color: #edf5e1;
-  font-size: clamp(2.5rem, 8vw, 75px);
+  color: #F0F4FF;
+  font-size: clamp(1.8rem, 6vw, 4rem);
   width: min(90vw, 71.5rem);
   margin: 30px auto;
   text-align: center;
 }
 
 .title h2.gradient-text {
-  background: linear-gradient(180deg, #00ffcc, #f6f6f6);
+  background: linear-gradient(180deg, #B22234, #F0F4FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -531,7 +645,7 @@ template {
   width: min(37rem, 70vw);
   height: min(37rem, 70vw);
   border-radius: 2rem;
-  border-color: #00ffcc;
+  border-color: #B22234;
   margin: 0;
   background: rgba(0, 0, 0, 0.22);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -574,7 +688,7 @@ template {
   position: relative;
   display: block;
   width: 100px;
-  border-bottom: double 24px #00ffcc;
+  border-bottom: double 24px #B22234;
   border-left: solid 15px rgba(255, 0, 0, 0);
   border-right: solid 15px rgba(255, 0, 0, 0);
 }
@@ -585,7 +699,7 @@ template {
   left: 0;
   height: 200px;
   width: 200px;
-  color: #05386b;
+  color: #B22234;
   cursor: pointer;
 }
 .logo div {
@@ -642,7 +756,7 @@ template {
   top: 0;
   left: 0;
   border-radius: 2rem;
-  background-color: #170025;
+  background-color: #0F1B33;
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -664,7 +778,7 @@ template {
   text-decoration: none;
   font-family: "Montserrat Alternates", sans-serif;
   font-size: clamp(2.5rem, 8vw, 8.5rem);
-  -webkit-text-stroke: 0.5px #edf5e1;
+  -webkit-text-stroke: 0.5px #F0F4FF;
   color: transparent;
   display: flex;
   transition: 0.5s;
@@ -672,7 +786,7 @@ template {
 }
 
 .sidenav a:hover {
-  color: #00ffbf;
+  color: #B22234;
 }
 
 .sidenav .closebtn {
@@ -699,10 +813,10 @@ template {
 .decoration-wrapper .eye {
   width: 32rem;
   height: 32rem;
-  border: solid 0.05px #edf5e1;
+  border: solid 0.05px #F0F4FF;
   border-radius: 75% 20%;
   transform: rotate(60deg);
-  background: linear-gradient(-80deg, #bf2bcc, #4f0169);
+  background: linear-gradient(-80deg, #B22234, #3C3B6E);
 }
 
 .decoration-wrapper img {
@@ -728,15 +842,15 @@ template {
 
 .nv-btn {
   font-family: monospace, monospace;
-  background-color: #0d1013;
-  color: #edf5e1;
+  background-color: #1A2744;
+  color: #F0F4FF;
   border: transparent;
   border-radius: 70px 40px;
   height: 40px;
   width: 250px;
   margin-left: -34px;
   margin-top: 22px;
-  box-shadow: inset 0 0 0 0 #01ceb3;
+  box-shadow: inset 0 0 0 0 #DC143C;
   transition: ease-out 0.6s;
   font-size: 1.4rem;
   font-weight: 800;
@@ -744,8 +858,8 @@ template {
 }
 
 .nv-btn:hover {
-  box-shadow: inset 300px 0 0 0 #01ceb3;
-  color: #370147;
+  box-shadow: inset 300px 0 0 0 #DC143C;
+  color: #FFFFFF;
 }
 
 .service {
@@ -781,8 +895,8 @@ template {
 }
 
 .wrapper .box .front-face {
-  background: linear-gradient(145deg, #170417, #1b041c);
-  box-shadow: 5px 5px 2px #0a020a, -5px -5px 2px #28062a;
+  background: linear-gradient(145deg, #0F1B33, #0F1B33);
+  box-shadow: 5px 5px 2px #060C17, -5px -5px 2px #1A2D52;
   height: 220px;
   border-radius: 2rem;
   border: 2.5px solid rgba(0, 0, 0, 0.08);
@@ -800,19 +914,19 @@ template {
 }
 
 .box .front-face .icon i {
-  font-size: 65px;
+  font-size: clamp(40px, 6vw, 65px);
 }
 
 .box .front-face span,
 .box .back-face span {
-  font-size: 24px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .box .front-face .icon i,
 .box .front-face span {
-  background: linear-gradient(-90deg, #00ff93, #c850c0);
+  background: linear-gradient(-90deg, #B22234, #3C3B6E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -828,7 +942,7 @@ template {
   opacity: 0;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  background: linear-gradient(145deg, #c850c0, #4b00b2);
+  background: linear-gradient(145deg, #3C3B6E, #1E3A6E);
   transform: translateY(110px) rotateX(-90deg);
   box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.301), -6px -6px 4px rgba(0, 0, 0, 0.301);
   transition: all 0.45s ease;
@@ -853,8 +967,8 @@ template {
   padding: clamp(20px, 5vw, 60px);
   width: min(90vw, 60rem);
   border-radius: 25px;
-  background: linear-gradient(145deg, #170417, #1b041c);
-  box-shadow: 5px 5px 2px #0a020a, -5px -5px 2px #28062a;
+  background: linear-gradient(145deg, #0F1B33, #0F1B33);
+  box-shadow: 5px 5px 2px #060C17, -5px -5px 2px #1A2D52;
   margin: auto;
   box-sizing: border-box;
 }
@@ -872,10 +986,10 @@ template {
 }
 
 .skill-bars .bar .info span {
-  color: #00ffcc;
+  color: #B22234;
   font-family: "Montserrat Alternates", monospace;
   font-weight: bolder;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   opacity: 0;
   animation: showText 0.5s 1s linear forwards;
 }
@@ -888,7 +1002,7 @@ template {
 .skill-bars .bar .progress-line {
   height: 10px;
   width: 100%;
-  background: #f0f0f0;
+  background: #1A2744;
   position: relative;
   transform: scaleX(0);
   transform-origin: left;
@@ -908,7 +1022,7 @@ template {
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: left;
-  background: #6665ee;
+  background: #B22234;
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
@@ -955,7 +1069,7 @@ template {
   background: #000;
   color: #fff;
   padding: 1px 8px;
-  font-size: 12px;
+  font-size: clamp(10px, 1.5vw, 12px);
   border-radius: 3px;
   opacity: 0;
   animation: showText2 0.5s 1.5s linear forwards;
@@ -991,11 +1105,10 @@ template {
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h2 {
   text-align: center;
-  color: #333;
+  color: #F0F4FF;
 }
 .work {
   display: flex;
@@ -1007,28 +1120,29 @@ h2 {
   width: calc(50% - 10px);
   margin-bottom: 20px;
   box-sizing: border-box;
-  background-color: #f9f9f9;
+  background: linear-gradient(145deg, #0F1B33, #0F1B33);
+  box-shadow: 5px 5px 2px #060C17, -5px -5px 2px #1A2D52;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .work-item img {
   width: 100%;
   height: auto;
   display: block;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #1A2744;
 }
 .work-item-content {
   padding: 10px;
 }
 .work-item h3 {
   margin-top: 0;
-  color: #333;
+  color: #F0F4FF;
 }
 .work-item p {
   margin-bottom: 0;
-  color: #666;
+  color: #A0B4D0;
 }
 
 .container {
@@ -1037,15 +1151,15 @@ h2 {
 }
 
 .container * {
-  color: #00ffcc;
+  color: #B22234;
   font-family: "Montserrat Alternates", monospace;
 }
 
 .clock {
   width: 100%;
   border-radius: 50px;
-  background: linear-gradient(145deg, #170a21, #1c0c28);
-  box-shadow: 6px 6px 0px #0a040f, -6px -6px 0px #2a123b;
+  background: linear-gradient(145deg, #0F1B33, #0F1B33);
+  box-shadow: 6px 6px 0px #060C17, -6px -6px 0px #1A2D52;
   padding: 80px 25px;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
@@ -1057,7 +1171,7 @@ h2 {
   font-family: "Anton", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #00ffcc;
+  color: #B22234;
   text-align: center;
 }
 
@@ -1082,5 +1196,5 @@ html {
 }
 
 body {
-  background-color: #010619;
+  background-color: #0A0F1D;
 }/*# sourceMappingURL=style.css.map */
