@@ -363,6 +363,9 @@ template {
   .work-item {
     width: 100%;
   }
+  .work {
+    grid-template-columns: 1fr;
+  }
   .sidenav .align-row {
     flex-direction: column;
   }
@@ -1101,7 +1104,7 @@ template {
 }
 
 .work-container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
@@ -1111,38 +1114,74 @@ h2 {
   color: #F0F4FF;
 }
 .work {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
   margin-top: 20px;
 }
 .work-item {
-  width: calc(50% - 10px);
-  margin-bottom: 20px;
   box-sizing: border-box;
   background: linear-gradient(145deg, #0F1B33, #0F1B33);
   box-shadow: 5px 5px 2px #060C17, -5px -5px 2px #1A2D52;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.work-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 4px #060C17, -8px -8px 4px #1A2D52;
 }
 
-.work-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-bottom: 1px solid #1A2744;
+.work-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 0;
+}
+.work-icon {
+  font-size: 2.2rem;
+  background: linear-gradient(-90deg, #B22234, #3C3B6E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.work-year {
+  font-family: "Montserrat Alternates", monospace;
+  font-size: 0.85rem;
+  color: #A0B4D0;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .work-item-content {
-  padding: 10px;
+  padding: 15px 20px 20px;
 }
-.work-item h3 {
-  margin-top: 0;
+.work-item-content h3 {
+  margin: 8px 0 6px;
   color: #F0F4FF;
+  font-family: "Montserrat Alternates", monospace;
+  font-size: 1.15rem;
 }
-.work-item p {
-  margin-bottom: 0;
+.work-item-content p {
+  margin: 0 0 12px;
   color: #A0B4D0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.work-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #B22234;
+  text-decoration: none;
+  font-family: "Montserrat Alternates", monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.work-link:hover {
+  color: #DC143C;
 }
 
 .container {
