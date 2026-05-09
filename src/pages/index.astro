@@ -4,6 +4,24 @@ import '../styles/style.css';
 ---
 
 <BaseLayout title="Thomas Schimdst Müller - CV">
+  <header class="dash-header">
+    <div class="dash-logo" onclick="openNav()">
+      <div class="triangle" id="head-triangle"></div>
+    </div>
+    <nav class="dash-nav">
+      <a href="/" class="active">Dashboard</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="/clock">Clock</a>
+    </nav>
+    <div class="dash-controls">
+      <div class="dash-search">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="dash-avatar">TM</div>
+    </div>
+  </header>
   <section class="start">
     <nav id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
@@ -22,12 +40,6 @@ import '../styles/style.css';
         </div>
       </div>
     </nav>
-
-    <div class="logo" onclick="openNav()">
-      <div class="trap" id="trap1"></div>
-      <div class="trap" id="trap2"></div>
-      <div class="trap" id="trap3"></div>
-    </div>
 
     <div class="main-container">
       <div class="herotxt">
@@ -64,7 +76,7 @@ import '../styles/style.css';
   </section>
 
   <section class="body" id="body">
-    <div class="service">
+    <div class="service" id="services">
       <div class="title">
         <h2 class="gradient-text">Our Services</h2>
       </div>
@@ -114,7 +126,7 @@ import '../styles/style.css';
         </div>
       </div>
 
-      <div class="skills">
+      <div class="skills" id="skills">
         <div class="title">
           <h2 class="gradient-text">Skills</h2>
         </div>
@@ -162,7 +174,7 @@ import '../styles/style.css';
         </div>
       </div>
 
-      <div class="work-container">
+      <div class="work-container" id="projects">
         <div class="title">
           <h2 class="gradient-text">Projects</h2>
         </div>

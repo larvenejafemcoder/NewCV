@@ -1,12 +1,15 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "100%";
     document.getElementById("start").style.marginLeft = "0";
+    var tri = document.getElementById("head-triangle");
+    if (tri) tri.classList.add("glow");
   }
   
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("start").style.marginLeft = "0";
-
+    var tri = document.getElementById("head-triangle");
+    if (tri) tri.classList.remove("glow");
 }
 
 const ethereumButton = document.querySelector('.sendEthButton');
