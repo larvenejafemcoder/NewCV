@@ -10,7 +10,7 @@
 
 
 @import url('footer.css');
-@import url('arc.css');
+@import url('arc_reactor.css');
 
 html {
   line-height: 1; /* 1 */
@@ -303,49 +303,105 @@ template {
   display: none;
 }
 
-@media screen and (max-width: 500px) {
-  .footer_contact a {
-    font-size: 1em;
-    min-width: -moz-fit-content;
-    min-width: fit-content;
+@media screen and (max-width: 992px) {
+  .start .main-container {
+    flex-direction: column;
+    text-align: center;
   }
-  .footer_p {
+  .start .herotxt .slide h1 {
+    text-align: center;
+  }
+  .sidenav a {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+  .sidenav .nav-wrapper {
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+  .decoration-wrapper .eye {
+    width: 20rem;
+    height: 20rem;
+  }
+  .decoration-wrapper img {
+    width: 16rem;
+    height: 16rem;
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  .work-item {
+    width: 100%;
+  }
+  .sidenav .align-row {
+    flex-direction: column;
+  }
+  .sidenav .decoration-wrapper {
     display: none;
   }
-  .footer_socials {
-    flex-direction: row;
+  .outer-heropic-container {
+    width: min(30rem, 80vw);
+    height: min(30rem, 80vw);
   }
-  .info {
-    max-width: 100vw;
+  .skill-bars {
+    padding: 20px;
+    width: min(95vw, 60rem);
   }
-  .info a {
-    display: none;
+  .nv-btn {
+    width: 180px;
+    font-size: 1.1rem;
+    margin-left: 0;
   }
-  .info a img {
-    display: none;
-    padding-right: 0;
+  footer {
+    width: 95%;
   }
-  .abt_me {
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 6rem;
+}
+
+@media screen and (max-width: 576px) {
+  .start .herotxt .slide h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    white-space: normal;
+    border-right: none;
+    animation: none;
   }
-  .all_projects {
-    flex-direction: column;
+  .container {
+    width: 95vw;
   }
-  .all_projects .left_projects {
-    width: 75vw;
+  .clock {
+    padding: 40px 15px;
   }
-  .all_projects .left_projects img {
-    width: 50vw;
+  .title h2 {
+    margin: 20px auto;
   }
-  .all_projects .right_projects {
-    width: 75vw;
+  .outer-heropic-container {
+    width: min(22rem, 90vw);
+    height: min(22rem, 90vw);
   }
-  .info {
-    min-height: -moz-fit-content;
-    min-height: fit-content;
-    flex-direction: column;
+  .box .front-face {
+    padding: 30px 40px;
+  }
+  .box .front-face .icon i {
+    font-size: 45px;
+  }
+  .social-icon {
+    height: 40px;
+    width: 40px;
+  }
+  .social-icon img {
+    height: 30px;
+    width: 30px;
+  }
+  footer h1 {
+    font-size: 18px;
+    margin: 0.67em 10px;
+  }
+  footer p {
+    font-size: 14px;
+    margin-left: 10px;
   }
 }
 .start {
@@ -360,22 +416,28 @@ template {
 .start .main-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
 }
 .start .herotxt {
-  margin-left: -35rem;
-  /* The typing effect */
+  flex: 1;
+  min-width: 280px;
 }
 .start .herotxt .slide h1 {
   text-align: left;
   font-weight: bolder;
-  font-size: 6rem;
+  font-size: clamp(3rem, 8vw, 6rem);
   font-family: "Major Mono Display", monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid transparent; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.1em; /* Adjust as needed */
+  overflow: hidden;
+  border-right: 0.15em solid transparent;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
   animation: typing 3s;
 }
 .start .herotxt h1.gradient-text {
@@ -399,7 +461,7 @@ template {
 }
 .start .herotxt h2 {
   font-weight: 800;
-  font-size: 3.6rem;
+  font-size: clamp(1.8rem, 4vw, 3.6rem);
   font-family: "Montserrat Alternates", monospace;
   text-align: center;
 }
@@ -453,8 +515,8 @@ template {
 .title h2 {
   font-family: "Montserrat Alternates", sans-serif;
   color: #edf5e1;
-  font-size: 75px;
-  width: 71.5rem;
+  font-size: clamp(2.5rem, 8vw, 75px);
+  width: min(90vw, 71.5rem);
   margin: 30px auto;
   text-align: center;
 }
@@ -466,32 +528,36 @@ template {
 }
 
 .outer-heropic-container {
-  width: 37rem;
-  height: 37rem;
+  width: min(37rem, 70vw);
+  height: min(37rem, 70vw);
   border-radius: 2rem;
   border-color: #00ffcc;
-  margin: 0px -45rem;
+  margin: 0;
   background: rgba(0, 0, 0, 0.22);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .outer-heropic-container img {
-  width: 37rem;
+  width: 100%;
   height: auto;
-  float: left;
-  margin-right: -10rem;
-  margin-left: 0rem;
-  margin-top: -14.5rem;
-  margin-bottom: -10rem;
+  max-width: 37rem;
+  display: block;
+  margin-top: -2rem;
 }
 
 .inner-heropic-container {
-  width: 15rem;
-  height: 15rem;
-  margin: 8.5rem auto;
+  width: 40%;
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0;
+  overflow: hidden;
 }
 
 .section {
@@ -594,7 +660,7 @@ template {
   padding: 8px;
   text-decoration: none;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 8.5rem;
+  font-size: clamp(2.5rem, 8vw, 8.5rem);
   -webkit-text-stroke: 0.5px #edf5e1;
   color: transparent;
   display: flex;
@@ -694,7 +760,9 @@ template {
   display: grid;
   margin: auto;
   grid-gap: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1200px;
+  padding: 0 2rem;
 }
 
 @media (max-width: 700px) {
@@ -779,12 +847,13 @@ template {
 }
 
 .skill-bars {
-  padding: 60px;
-  width: 60rem;
+  padding: clamp(20px, 5vw, 60px);
+  width: min(90vw, 60rem);
   border-radius: 25px;
   background: linear-gradient(145deg, #170417, #1b041c);
   box-shadow: 5px 5px 2px #0a020a, -5px -5px 2px #28062a;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .skill-bars .bar {
@@ -940,6 +1009,7 @@ h2 {
   overflow: hidden;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
 .work-item img {
   width: 100%;
   height: auto;
@@ -959,11 +1029,8 @@ h2 {
 }
 
 .container {
-  width: 450px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
+  width: min(90vw, 450px);
+  margin: 0 auto;
 }
 
 .container * {
@@ -996,7 +1063,7 @@ h2 {
 }
 
 #time {
-  font-size: 74px;
+  font-size: clamp(2.5rem, 10vw, 74px);
   text-transform: uppercase;
   display: inline-block;
 }
@@ -1004,7 +1071,7 @@ h2 {
 #midday {
   text-transform: uppercase;
   display: inline-block;
-  font-size: 30px;
+  font-size: clamp(1.2rem, 4vw, 30px);
 }
 
 html {

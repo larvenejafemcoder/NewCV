@@ -4,8 +4,9 @@ footer{
 	background: #23092B;
 	color: #edf5e1;
 	font-family: "Montserrat Alternates", monospace;
-	height: 210px;
-	width: 85%;
+	height: auto;
+	min-height: 210px;
+	width: min(90%, 1200px);
 	display: block;
 	margin: auto;
 	padding: 5px 20px;
@@ -30,6 +31,8 @@ footer h1{
 
 .social{
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .social-icon img{
     height: 40px;
